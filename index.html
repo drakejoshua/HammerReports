@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- page's metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page's title -->
     <title>Hammer Reports</title>
 
     <!-- link to bootstrap cdn resource -->
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- link to the custom styling file -->
     <link rel="stylesheet" href="./style.css">
@@ -60,17 +64,28 @@
     <!-- scroll/play section -->
     <section id="scroll" class="bg-black flex-grow-1 overflow-auto">
         <div class="container h-100">
+
+            <!-- the side columns -->
             <div class="row h-100 overflow-auto">
+
+                <!-- column 1( containing the box ) -->
                 <div class="col-md-7 box-ctn d-flex align-items-center justify-content-center">
+
+                    <!-- the box -->
                     <div id="box" class="overflow-hidden p-3"> 
                         perform an action on me: tap, double-tap, swipe-up, swipe-down,
                         swipe-left, swipe-right, triple-tap, etc.
                     </div>
+
                 </div>
 
 
+                <!-- column 2( containing the action list ) -->
                 <div class="col-md-5 py-5">
+
+                    <!-- the action-list -->
                     <ul class="list-group" id="action-list"></ul>
+
                 </div>
             </div>
         </div>
@@ -83,6 +98,7 @@
     <script src="./node_modules/hammerjs/hammer.min.js"></script>
 
     <!-- link to the custom javascript file -->
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
