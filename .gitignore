@@ -1,2 +1,5 @@
 # ignore the bootstrap folder
 bootstrap/
+
+# ignore the node_modules folder
+node_modules/
