@@ -35,6 +35,12 @@ manager.add([tripleTapRecognizer, doubleTapRecognizer, tapRecognizer]);
 manager.on( "tap", function( event ){
     actionList.innerHTML += 
         `<li class="list-group-item list-group-item-action color-bg-wheat text-capitalize">Tap detected</li>`;
+
+    box.style.transform = `translateZ( -200px )`;
+
+    setTimeout( function(){
+        box.style.transform = `none`;
+    }, 500 );
 } );
 
 manager.on( "doubletap", function( event ){
@@ -46,3 +52,10 @@ manager.on( "tripletap", function( event ){
     actionList.innerHTML += 
         `<li class="list-group-item list-group-item-action color-bg-wheat text-capitalize">triple Tap detected</li>`;
 } );
+
+
+
+
+/* #box:hover {
+    transform: scale3d(1.8, 1, 3.5) rotateX(30deg);
+} */
