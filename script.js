@@ -59,6 +59,14 @@ var swipeRightRecognizer = new Hammer.Swipe(
     }
 );              // for swipe right
 
+var panStartRecognizer = new Hammer.Pan(
+    {
+        event: "panstart",
+        threshold: 10,
+        direction: Hammer.DIRECTION_ALL
+    }
+);              // for pan start
+
 
 // add the recognizers to the manager
 manager.add(
@@ -69,7 +77,8 @@ manager.add(
         swipeUpRecognizer,
         swipeLeftRecognizer,
         swipeRightRecognizer,
-        swipeDownRecognizer
+        swipeDownRecognizer,
+        panStartRecognizer
     ]
 );
 
@@ -137,6 +146,16 @@ manager.on( "swipedown", function( event ){
     box.style.transform = `scale3d(1.8, 1, 3.5) translateY(20px)`
     resetBoxDisplay();
 } );            // swipe-down
+
+manager.on( "panstart", function( event ){
+    // report the event in the action-list
+    actionList.innerHTML += 
+        `<li class="list-group-item list-group-item-action color-bg-wheat text-capitalize">pan detected</li>`;
+
+    // play the interaction 
+    box.style.transform = `scale3d(1.8, 1, 3.5) translateZ(-200px)`;
+    resetBoxDisplay();
+} );            // pan-start
 
 
 
