@@ -3,3 +3,6 @@ bootstrap/
 
 # ignore the node_modules folder
 node_modules/
+
+# ignore the .cache/ folder
+.cache/
