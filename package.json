@@ -4,8 +4,8 @@
   "description": "A sample web project that i'm using to practice javascript libraries usage using html. css, bootstrap, javascript and the hammer.js library ",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html",
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --out-dir ./",
     "check-format": "prettier . --check",
     "format": "prettier . --write"
   },
