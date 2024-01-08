@@ -1,3 +1,9 @@
+// import styling files for the page
+import "./style.css";
+
+// import code dependenies such as: hammerjs
+import Hammer from "hammerjs";
+
 // import the DOM representation of the elements on the page
 var box = document.getElementById("box");
 var actionList = document.getElementById("action-list");
