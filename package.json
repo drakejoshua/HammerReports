@@ -18,5 +18,8 @@
   "homepage": "https://github.com/drakejoshua/HammerReports#readme",
   "dependencies": {
     "hammerjs": "^2.0.8"
+  },
+  "devDependencies": {
+    "prettier": "3.1.1"
   }
 }
