@@ -1,0 +1,7 @@
+# this is a ignore file for configuring the prettier code formatter
+
+# ignore the node_modules/ folder
+node_modules/
+
+# ignore the bootstrap folder
+bootstrap/
