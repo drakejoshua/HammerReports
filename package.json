@@ -4,10 +4,11 @@
   "description": "A sample web project that i'm using to practice javascript libraries usage using html. css, bootstrap, javascript and the hammer.js library ",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --out-dir ./",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
     "check-format": "prettier . --check",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "deploy": "gh-pages -d ./dist --repo https://github.com/drakejoshua/HammerReports.git"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "hammerjs": "^2.0.8"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "parcel-bundler": "^1.12.5",
     "prettier": "3.1.1"
   }
