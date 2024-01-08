@@ -1,94 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- page's metadata -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- page's title -->
     <title>Hammer Reports</title>
 
     <!-- link to bootstrap cdn resource -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
     <!-- link to the custom styling file -->
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body class="d-flex flex-column">
-
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="d-flex flex-column">
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-black py-3">
+      <div class="container mx-auto">
+        <!-- navbar logo -->
+        <a class="navbar-brand h4 text-decoration-underline" href="#">
+          Mabawonku Joshua
+          <span class="small ms-2 badge bg-primary rounded-pill"> DEV </span>
+        </a>
 
-        <div class="container mx-auto">
+        <!-- navbar toggle icon -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- navbar logo -->
-            <a class="navbar-brand h4 text-decoration-underline" href="#">
-                Mabawonku Joshua
+        <!-- navbar responsive collapse container -->
+        <div class="navbar-collapse collapse" id="collapsibleNavbar">
+          <!-- navbar item/link menu -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
 
-                <span class="small ms-2 badge bg-primary rounded-pill">
-                    DEV
-                </span>
-            </a>
-    
-            <!-- navbar toggle icon -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <!-- navbar responsive collapse container -->
-            <div class="navbar-collapse collapse" id="collapsibleNavbar">
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
 
-                <!-- navbar item/link menu -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Connect</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Donate</a>
-                    </li>
-                </ul>
-            </div>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Connect</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">Donate</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- scroll/play section -->
     <section id="scroll" class="bg-black flex-grow-1 overflow-auto">
-        <div class="container h-100">
-
-            <!-- the side columns -->
-            <div class="row h-100 overflow-auto">
-
-                <!-- column 1( containing the box ) -->
-                <div class="col-md-7 box-ctn d-flex align-items-center justify-content-center">
-
-                    <!-- the box -->
-                    <div id="box" class="overflow-hidden p-3"> 
-                        perform an action on me: tap, double-tap, swipe-up, swipe-down,
-                        swipe-left, swipe-right, triple-tap, etc.
-                    </div>
-
-                </div>
-
-
-                <!-- column 2( containing the action list ) -->
-                <div class="col-md-5 py-5">
-
-                    <!-- the action-list -->
-                    <ul class="list-group" id="action-list"></ul>
-
-                </div>
+      <div class="container h-100">
+        <!-- the side columns -->
+        <div class="row h-100 overflow-auto">
+          <!-- column 1( containing the box ) -->
+          <div
+            class="col-md-7 box-ctn d-flex align-items-center justify-content-center"
+          >
+            <!-- the box -->
+            <div id="box" class="overflow-hidden p-3">
+              perform an action on me: tap, double-tap, swipe-up, swipe-down,
+              swipe-left, swipe-right, triple-tap, etc.
             </div>
+          </div>
+
+          <!-- column 2( containing the action list ) -->
+          <div class="col-md-5 py-5">
+            <!-- the action-list -->
+            <ul class="list-group" id="action-list"></ul>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- link to bootstrap script cdn resource -->
@@ -98,7 +95,10 @@
     <script src="./node_modules/hammerjs/hammer.min.js"></script>
 
     <!-- link to the custom javascript file -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
